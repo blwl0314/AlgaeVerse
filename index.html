@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AlgaeVerse AI - Sustainable Urban Cooling Solutions</title>
+    <title>SkyLux AlgaeVerse - Sustainable Urban Farming Solutions</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
     />
     <style>
       /* Base styles */
@@ -14,29 +18,39 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Poppins", "Arial", sans-serif;
       }
 
       body {
-        background: linear-gradient(135deg, #000000, #2d004d, #4a0080);
-        color: #ffffff;
+        font-family: "Open Sans", sans-serif;
+        background: linear-gradient(135deg, #0a3d3f 0%, #1b5e5f 100%);
+        color: #f8f9fa;
         line-height: 1.6;
         min-height: 100vh;
         background-attachment: fixed;
       }
 
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+      }
+
       /* Navigation */
       nav {
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(13, 61, 63, 0.95);
         padding: 1rem 2rem;
         position: sticky;
         top: 0;
         z-index: 100;
-        box-shadow: 0 4px 12px rgba(128, 0, 255, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         backdrop-filter: blur(10px);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid rgba(122, 186, 188, 0.2);
       }
 
       nav ul {
@@ -47,23 +61,24 @@
       }
 
       nav ul li {
-        margin: 0 1rem;
+        margin: 0 0.5rem;
       }
 
       nav ul li a {
-        color: #ffffff;
+        color: #e9f7f7;
         text-decoration: none;
-        font-weight: bold;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
+        font-weight: 500;
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
         transition: all 0.3s ease;
         display: flex;
         align-items: center;
         gap: 8px;
+        font-size: 0.95rem;
       }
 
       nav ul li a:hover {
-        background: rgba(128, 0, 255, 0.3);
+        background: rgba(122, 186, 188, 0.2);
         transform: translateY(-2px);
       }
 
@@ -73,20 +88,22 @@
       }
 
       .user-btn {
-        background: rgba(128, 0, 255, 0.3);
-        color: white;
+        background: rgba(122, 186, 188, 0.25);
+        color: #e9f7f7;
         border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
         cursor: pointer;
         display: flex;
         align-items: center;
         gap: 8px;
         transition: all 0.3s ease;
+        font-weight: 500;
+        font-size: 0.95rem;
       }
 
       .user-btn:hover {
-        background: rgba(128, 0, 255, 0.5);
+        background: rgba(122, 186, 188, 0.4);
         transform: translateY(-2px);
       }
 
@@ -97,21 +114,24 @@
       }
 
       .user-avatar {
-        width: 35px;
-        height: 35px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
-        background: linear-gradient(45deg, #6a00f4, #8a2be2);
+        background: linear-gradient(135deg, #2a9d8f, #1b5e5f);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1rem;
+        color: white;
+        font-weight: 600;
+        border: 2px solid rgba(122, 186, 188, 0.3);
       }
 
       /* Page container */
       .page {
         display: none;
         padding: 2rem;
-        max-width: 1200px;
+        max-width: 1280px;
         margin: 0 auto;
         animation: fadeIn 0.5s ease;
       }
@@ -135,45 +155,69 @@
       h1,
       h2,
       h3 {
-        margin-bottom: 1rem;
-        text-align: center;
-        color: #d8b6ff;
+        margin-bottom: 1.2rem;
+        color: #e9f7f7;
       }
 
       h1 {
-        font-size: 2.5rem;
-        margin: 2rem 0;
-        text-shadow: 0 0 10px rgba(128, 0, 255, 0.7);
+        font-size: 2.8rem;
+        margin: 2.5rem 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(45deg, #a8dadc, #7ababc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       h2 {
-        font-size: 2rem;
-        margin-top: 2rem;
-        border-bottom: 2px solid #8a2be2;
-        padding-bottom: 0.5rem;
+        font-size: 2.2rem;
+        margin-top: 2.5rem;
+        padding-bottom: 0.8rem;
+        position: relative;
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #2a9d8f, #1b5e5f);
+        border-radius: 2px;
       }
 
       h3 {
-        font-size: 1.5rem;
-        color: #c77dff;
-        margin-top: 1.5rem;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        color: #a8dadc;
       }
 
       /* Content sections */
       .content-section {
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 10px;
-        padding: 2rem;
-        margin: 2rem 0;
-        box-shadow: 0 4px 15px rgba(128, 0, 255, 0.2);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 2.5rem;
+        margin: 2.5rem 0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(122, 186, 188, 0.15);
       }
 
       /* Hero section */
       .hero {
         text-align: center;
-        padding: 4rem 2rem;
+        padding: 5rem 2rem;
         position: relative;
         overflow: hidden;
+        border-radius: 16px;
+        margin: 2rem 0;
+        background: linear-gradient(
+            135deg,
+            rgba(13, 61, 63, 0.7) 0%,
+            rgba(27, 94, 95, 0.8) 100%
+          ),
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231b5e5f"/><path d="M0 50 L100 50 M50 0 L50 100" stroke="%232a9d8f" stroke-width="0.5" stroke-opacity="0.2"/></svg>');
       }
 
       .hero::before {
@@ -185,26 +229,23 @@
         height: 100%;
         background: radial-gradient(
           circle at center,
-          rgba(138, 43, 226, 0.2) 0%,
-          rgba(0, 0, 0, 0) 70%
+          rgba(42, 157, 143, 0.25) 0%,
+          rgba(13, 61, 63, 0) 70%
         );
         z-index: -1;
       }
 
       .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        background: linear-gradient(45deg, #bb86fc, #8a2be2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: none;
+        font-size: 3.8rem;
+        margin-bottom: 1.5rem;
       }
 
       .hero p {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         max-width: 800px;
-        margin: 0 auto 2rem;
-        color: #e0d6ff;
+        margin: 0 auto 3rem;
+        color: #e9f7f7;
+        font-weight: 300;
       }
 
       /* Cards */
@@ -213,48 +254,72 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 2rem;
-        margin: 2rem 0;
+        margin: 2.5rem 0;
       }
 
       .card {
-        background: rgba(45, 0, 77, 0.7);
-        border-radius: 10px;
-        padding: 1.5rem;
+        background: linear-gradient(
+          135deg,
+          rgba(42, 157, 143, 0.15) 0%,
+          rgba(27, 94, 95, 0.25) 100%
+        );
+        border-radius: 16px;
+        padding: 2rem;
         flex: 1 1 300px;
-        max-width: 350px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        transition: transform 0.3s ease;
+        max-width: 380px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(122, 186, 188, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #2a9d8f, #1b5e5f);
       }
 
       .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(128, 0, 255, 0.4);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
       }
 
       .card h3 {
-        color: #e0aaff;
+        color: #e9f7f7;
         margin-top: 0;
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        color: #caf0f0;
       }
 
       /* Lists */
       ul,
       ol {
-        margin-left: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-left: 1.8rem;
+        margin-bottom: 1.8rem;
       }
 
       li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
         position: relative;
+        color: #e9f7f7;
       }
 
       li::before {
         content: "•";
-        color: #bb86fc;
+        color: #2a9d8f;
         font-weight: bold;
         display: inline-block;
         width: 1em;
@@ -264,128 +329,173 @@
       /* Footer */
       footer {
         text-align: center;
-        padding: 2rem;
-        margin-top: 2rem;
-        background: rgba(0, 0, 0, 0.8);
-        border-top: 1px solid #4a0080;
+        padding: 3rem 2rem;
+        margin-top: 4rem;
+        background: rgba(13, 61, 63, 0.9);
+        border-top: 1px solid rgba(122, 186, 188, 0.2);
+      }
+
+      footer p {
+        color: #caf0f0;
+        margin-bottom: 0.5rem;
       }
 
       /* Buttons */
       .btn {
         display: inline-block;
-        background: linear-gradient(45deg, #6a00f4, #8a2be2);
+        background: linear-gradient(135deg, #2a9d8f 0%, #1b5e5f 100%);
         color: white;
-        padding: 0.8rem 1.5rem;
-        border-radius: 30px;
+        padding: 1rem 2.2rem;
+        border-radius: 50px;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 600;
         border: none;
         cursor: pointer;
         transition: all 0.3s ease;
-        margin: 0.5rem;
-        box-shadow: 0 4px 8px rgba(106, 0, 244, 0.3);
+        margin: 0.8rem;
+        box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: 0.5s;
+      }
+
+      .btn:hover:before {
+        left: 100%;
       }
 
       .btn:hover {
-        background: linear-gradient(45deg, #8a2be2, #6a00f4);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(128, 0, 255, 0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(42, 157, 143, 0.4);
       }
 
       /* Icons */
       .icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #bb86fc;
-        background: rgba(187, 134, 252, 0.1);
-        width: 80px;
-        height: 80px;
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+        color: #a8dadc;
+        background: rgba(168, 218, 220, 0.1);
+        width: 90px;
+        height: 90px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+        border: 2px solid rgba(168, 218, 220, 0.2);
       }
 
       /* Visualizations */
       .visualization {
-        margin: 2rem 0;
-        padding: 1.5rem;
-        background: rgba(35, 0, 60, 0.5);
-        border-radius: 10px;
-        border-left: 4px solid #8a2be2;
+        margin: 2.5rem 0;
+        padding: 2rem;
+        background: rgba(13, 61, 63, 0.4);
+        border-radius: 16px;
+        border-left: 5px solid #2a9d8f;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
       .stats-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0;
+        gap: 1.8rem;
+        margin: 2.5rem 0;
       }
 
       .stat-box {
-        background: rgba(138, 43, 226, 0.2);
-        padding: 1.5rem;
-        border-radius: 10px;
+        background: linear-gradient(
+          135deg,
+          rgba(42, 157, 143, 0.15) 0%,
+          rgba(27, 94, 95, 0.25) 100%
+        );
+        padding: 2rem;
+        border-radius: 16px;
         text-align: center;
         transition: transform 0.3s ease;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(122, 186, 188, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
       }
 
       .stat-box:hover {
         transform: scale(1.03);
-        background: rgba(138, 43, 226, 0.25);
+        background: linear-gradient(
+          135deg,
+          rgba(42, 157, 143, 0.2) 0%,
+          rgba(27, 94, 95, 0.3) 100%
+        );
       }
 
       .stat-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #e0aaff;
-        margin-bottom: 0.5rem;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #a8dadc;
+        margin-bottom: 0.8rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       .stat-label {
-        font-size: 1rem;
-        color: #d8b6ff;
+        font-size: 1.1rem;
+        color: #caf0f0;
+        font-weight: 500;
       }
 
       .comparison-chart {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        height: 200px;
-        margin: 2rem 0;
-        padding: 1rem;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
+        height: 240px;
+        margin: 2.5rem 0;
+        padding: 1.5rem;
+        background: rgba(13, 61, 63, 0.4);
+        border-radius: 16px;
+        box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
       .chart-bar {
-        width: 60px;
-        background: linear-gradient(to top, #6a00f4, #8a2be2);
-        border-radius: 5px 5px 0 0;
+        width: 70px;
+        background: linear-gradient(to top, #1b5e5f, #2a9d8f);
+        border-radius: 8px 8px 0 0;
         position: relative;
-        transition: height 0.5s ease;
+        transition: height 0.8s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
       }
 
       .chart-bar-label {
         position: absolute;
-        bottom: -25px;
+        bottom: -30px;
         width: 100%;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        color: #e9f7f7;
+        font-weight: 500;
       }
 
       .process-flow {
         display: flex;
         justify-content: space-between;
-        margin: 2rem 0;
+        margin: 2.5rem 0;
         flex-wrap: wrap;
       }
 
       .process-step {
         flex: 1;
-        min-width: 200px;
+        min-width: 220px;
         text-align: center;
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
         position: relative;
       }
 
@@ -395,22 +505,24 @@
         right: -10px;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 1.5rem;
-        color: #bb86fc;
+        font-size: 2rem;
+        color: #2a9d8f;
+        opacity: 0.7;
       }
 
       .step-icon {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        color: #bb86fc;
-        background: rgba(187, 134, 252, 0.1);
-        width: 70px;
-        height: 70px;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #a8dadc;
+        background: rgba(168, 218, 220, 0.1);
+        width: 80px;
+        height: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        margin: 0 auto 1rem;
+        margin: 0 auto 1.5rem;
+        border: 2px solid rgba(168, 218, 220, 0.2);
       }
 
       /* Login Modal */
@@ -421,163 +533,192 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.7);
         z-index: 1000;
         align-items: center;
         justify-content: center;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(8px);
       }
 
       .modal-content {
-        background: linear-gradient(135deg, #1a0033, #2d004d);
-        padding: 2rem;
-        border-radius: 10px;
+        background: linear-gradient(135deg, #0d3d3f 0%, #1b5e5f 100%);
+        padding: 2.5rem;
+        border-radius: 20px;
         width: 90%;
-        max-width: 400px;
-        box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        max-width: 450px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         position: relative;
+        border: 1px solid rgba(122, 186, 188, 0.3);
       }
 
       .close-modal {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 1.2rem;
+        right: 1.2rem;
         background: none;
         border: none;
-        color: #fff;
-        font-size: 1.5rem;
+        color: #e9f7f7;
+        font-size: 1.8rem;
         cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .close-modal:hover {
+        color: #a8dadc;
       }
 
       .form-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.8rem;
       }
 
       .form-group label {
         display: block;
-        margin-bottom: 0.5rem;
-        color: #d8b6ff;
+        margin-bottom: 0.8rem;
+        color: #caf0f0;
+        font-weight: 500;
       }
 
       .form-group input {
         width: 100%;
-        padding: 0.8rem;
-        border-radius: 5px;
-        border: 1px solid #4a0080;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 1px solid rgba(122, 186, 188, 0.4);
+        background: rgba(13, 61, 63, 0.5);
+        color: #e9f7f7;
+        font-size: 1rem;
+        transition: all 0.3s ease;
       }
 
       .form-group input:focus {
         outline: none;
-        border-color: #8a2be2;
-        box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+        border-color: #2a9d8f;
+        box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.3);
+        background: rgba(13, 61, 63, 0.7);
       }
 
       .form-footer {
-        margin-top: 1.5rem;
+        margin-top: 1.8rem;
         text-align: center;
-        color: #d8b6ff;
+        color: #caf0f0;
       }
 
       .form-footer a {
-        color: #bb86fc;
+        color: #a8dadc;
         text-decoration: none;
         cursor: pointer;
+        font-weight: 600;
+        transition: color 0.3s ease;
       }
 
       .form-footer a:hover {
+        color: #e9f7f7;
         text-decoration: underline;
       }
 
       .error-message {
         color: #ff6b6b;
-        margin-top: 0.5rem;
-        font-size: 0.9rem;
+        margin-top: 0.8rem;
+        font-size: 0.95rem;
         display: none;
       }
 
       /* Dashboard elements (for logged-in users) */
       .dashboard-section {
         display: none;
-        background: rgba(45, 0, 77, 0.5);
-        border-radius: 10px;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        border-left: 4px solid #bb86fc;
+        background: linear-gradient(
+          135deg,
+          rgba(42, 157, 143, 0.15) 0%,
+          rgba(27, 94, 95, 0.25) 100%
+        );
+        border-radius: 16px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-left: 5px solid #a8dadc;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(122, 186, 188, 0.2);
       }
 
       /* Dashboard specific styles */
       .dashboard-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.8rem;
+        margin: 2.5rem 0;
       }
 
       .dashboard-card {
-        background: rgba(45, 0, 77, 0.7);
-        border-radius: 10px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(
+          135deg,
+          rgba(42, 157, 143, 0.15) 0%,
+          rgba(27, 94, 95, 0.25) 100%
+        );
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(122, 186, 188, 0.2);
       }
 
       .dashboard-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(128, 0, 255, 0.4);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
       }
 
       .dashboard-card h3 {
-        color: #e0aaff;
+        color: #e9f7f7;
         margin-top: 0;
-        border-bottom: 1px solid #8a2be2;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 2px solid rgba(122, 186, 188, 0.3);
       }
 
       .control-panel {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.2rem;
       }
 
       .control-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(122, 186, 188, 0.2);
       }
 
       .slider-container {
         width: 60%;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.8rem;
       }
 
       .slider {
         -webkit-appearance: none;
         width: 100%;
-        height: 8px;
+        height: 10px;
         border-radius: 5px;
-        background: rgba(187, 134, 252, 0.2);
+        background: rgba(168, 218, 220, 0.2);
         outline: none;
       }
 
       .slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         border-radius: 50%;
-        background: #8a2be2;
+        background: #2a9d8f;
         cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        border: 2px solid #e9f7f7;
       }
 
       .slider-value {
-        min-width: 40px;
+        min-width: 45px;
         text-align: right;
+        font-weight: 600;
+        color: #a8dadc;
       }
 
       .alert-list {
@@ -586,13 +727,14 @@
       }
 
       .alert-list li {
-        padding: 0.8rem;
-        margin-bottom: 0.8rem;
-        border-radius: 5px;
-        background: rgba(187, 134, 252, 0.1);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        background: rgba(168, 218, 220, 0.1);
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        border-left: 4px solid;
       }
 
       .alert-list li::before {
@@ -616,47 +758,228 @@
       .data-table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
       .data-table th,
       .data-table td {
-        padding: 0.8rem;
+        padding: 1rem;
         text-align: left;
-        border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+        border-bottom: 1px solid rgba(122, 186, 188, 0.2);
       }
 
       .data-table th {
-        color: #bb86fc;
+        background: rgba(42, 157, 143, 0.2);
+        color: #a8dadc;
+        font-weight: 600;
+      }
+
+      .data-table tr {
+        background: rgba(255, 255, 255, 0.05);
+        transition: background 0.3s ease;
+      }
+
+      .data-table tr:hover {
+        background: rgba(42, 157, 143, 0.1);
       }
 
       .progress-bar {
-        height: 10px;
-        background: rgba(187, 134, 252, 0.2);
-        border-radius: 5px;
+        height: 12px;
+        background: rgba(168, 218, 220, 0.2);
+        border-radius: 6px;
         overflow: hidden;
-        margin: 0.5rem 0;
+        margin: 0.8rem 0;
       }
 
       .progress-fill {
         height: 100%;
-        background: linear-gradient(90deg, #6a00f4, #8a2be2);
-        border-radius: 5px;
+        background: linear-gradient(90deg, #1b5e5f, #2a9d8f);
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(42, 157, 143, 0.4);
+      }
+
+      /* Business Model Canvas Section */
+      .canvas-section {
+        margin: 2.5rem 0;
+      }
+
+      .canvas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.8rem;
+        margin: 2.5rem 0;
+      }
+
+      .canvas-card {
+        background: linear-gradient(
+          135deg,
+          rgba(42, 157, 143, 0.15) 0%,
+          rgba(27, 94, 95, 0.25) 100%
+        );
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(122, 186, 188, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .canvas-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .canvas-card h3 {
+        color: #e9f7f7;
+        border-bottom: 2px solid rgba(122, 186, 188, 0.3);
+        padding-bottom: 0.8rem;
+        margin-top: 0;
+      }
+
+      /* New Visualization Components */
+      .co2-visualization {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 2.5rem 0;
+        padding: 2rem;
+        background: rgba(13, 61, 63, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .co2-tree-equivalent {
+        text-align: center;
+        padding: 1.5rem;
+      }
+
+      .tree-icon {
+        font-size: 3rem;
+        color: #2a9d8f;
+        margin-bottom: 1rem;
+      }
+
+      .tree-count {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #a8dadc;
+        margin-bottom: 0.5rem;
+      }
+
+      .tree-label {
+        color: #caf0f0;
+        font-weight: 500;
+      }
+
+      .vs-text {
+        font-size: 1.5rem;
+        color: #e9f7f7;
+        font-weight: 600;
+      }
+
+      /* Algae Growth Visualization */
+      .growth-visualization {
+        margin: 2.5rem 0;
+        padding: 2rem;
+        background: rgba(13, 61, 63, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .growth-bar-container {
+        height: 30px;
+        background: rgba(168, 218, 220, 0.2);
+        border-radius: 15px;
+        margin: 1.5rem 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .growth-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #1b5e5f, #2a9d8f);
+        border-radius: 15px;
+        width: 0;
+        transition: width 2s ease-in-out;
+        box-shadow: 0 0 10px rgba(42, 157, 143, 0.4);
+      }
+
+      .growth-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+        color: #caf0f0;
+        font-weight: 500;
+      }
+
+      /* World Map Visualization */
+      .world-map-viz {
+        margin: 2.5rem 0;
+        padding: 2rem;
+        background: rgba(13, 61, 63, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .map-container {
+        height: 300px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500"><path d="M100,200 C300,100 500,300 700,200 C900,100 950,250 900,400" stroke="%232a9d8f" stroke-width="5" fill="none" stroke-dasharray="20,10"/><circle cx="200" cy="150" r="15" fill="%232a9d8f"/><circle cx="500" cy="300" r="15" fill="%232a9d8f"/><circle cx="700" cy="250" r="15" fill="%232a9d8f"/><circle cx="300" cy="400" r="15" fill="%232a9d8f"/></svg>');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .map-point {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #2a9d8f;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 8px rgba(42, 157, 143, 0.3);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(42, 157, 143, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(42, 157, 143, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(42, 157, 143, 0);
+        }
+      }
+
+      .map-label {
+        position: absolute;
+        background: rgba(13, 61, 63, 0.9);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        color: #e9f7f7;
+        font-weight: 500;
+        transform: translate(-50%, 10px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(122, 186, 188, 0.3);
       }
 
       /* Responsive */
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         nav ul {
-          flex-direction: column;
-          align-items: center;
+          gap: 0.5rem;
         }
 
         nav ul li {
-          margin: 0.5rem 0;
+          margin: 0.3rem 0;
         }
 
         .hero h1 {
-          font-size: 2.5rem;
+          font-size: 3rem;
         }
 
         .process-step:not(:last-child)::after {
@@ -665,16 +988,57 @@
 
         .process-step {
           min-width: 100%;
-          margin-bottom: 1.5rem;
+          margin-bottom: 2rem;
         }
+      }
 
+      @media (max-width: 768px) {
         nav {
           flex-direction: column;
-          gap: 1rem;
+          gap: 1.2rem;
+          padding: 1rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+
+        nav ul li {
+          width: 100%;
+          text-align: center;
+          margin: 0.3rem 0;
+        }
+
+        .hero {
+          padding: 3rem 1.5rem;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.2rem;
+        }
+
+        .content-section {
+          padding: 1.8rem;
         }
 
         .slider-container {
           width: 50%;
+        }
+
+        .co2-visualization {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .vs-text {
+          transform: rotate(90deg);
+          margin: 1rem 0;
         }
       }
     </style>
@@ -704,8 +1068,8 @@
           >
         </li>
         <li>
-          <a href="#" onclick="showPage('impact')"
-            ><i class="fas fa-chart-line"></i> Impact</a
+          <a href="#" onclick="showPage('business')"
+            ><i class="fas fa-chart-line"></i> Business Model</a
           >
         </li>
         <!-- Dashboard links (shown only when logged in) -->
@@ -818,20 +1182,20 @@
     <!-- Home Page -->
     <div id="home" class="page active">
       <div class="hero">
-        <h1>AlgaeVerse AI</h1>
-        <p>Intelligent Algae Façade Optimization for Sustainable Cities</p>
+        <h1>SkyLux AlgaeVerse</h1>
+        <p>Intelligent Algae Farming for Sustainable Urban Solutions</p>
         <a href="#" class="btn" onclick="showPage('problem')"
           >Explore Our Solution</a
         >
       </div>
 
       <div class="content-section">
-        <h2>Transforming Urban Environments with AI-Powered Bio-Solutions</h2>
+        <h2>Transforming Urban Environments with AI-Powered Algae Solutions</h2>
         <p>
-          AlgaeVerse AI combines cutting-edge artificial intelligence with
-          sustainable biotechnology to create smarter, greener, and more livable
-          cities. Our intelligent algae building façades act as "living green
-          skins" that naturally cool buildings, capture CO₂, and produce oxygen.
+          SkyLux AlgaeVerse combines cutting-edge artificial intelligence with
+          sustainable algae biotechnology to create smarter, greener, and more
+          productive urban spaces. Our intelligent algae systems provide natural
+          cooling, air purification, and valuable biomass production.
         </p>
 
         <!-- Dashboard section for logged-in users -->
@@ -852,7 +1216,7 @@
             </div>
             <div class="stat-box">
               <div class="stat-number" id="userBuildings">0</div>
-              <div class="stat-label">Buildings Monitored</div>
+              <div class="stat-label">Installations</div>
             </div>
           </div>
         </div>
@@ -862,7 +1226,7 @@
             <div class="icon"><i class="fas fa-snowflake"></i></div>
             <h3>Natural Cooling</h3>
             <p>
-              Reduce urban heat island effect without energy-intensive AC
+              Reduce urban heat island effect with our evaporative algae cooling
               systems
             </p>
           </div>
@@ -877,6 +1241,23 @@
             <p>
               Harvested algae reused as biofuel, fertilizer, or food products
             </p>
+          </div>
+        </div>
+
+        <!-- CO2 Visualization -->
+        <div class="co2-visualization">
+          <div class="co2-tree-equivalent">
+            <div class="tree-icon"><i class="fas fa-tree"></i></div>
+            <div class="tree-count">100</div>
+            <div class="tree-label">Traditional Trees</div>
+          </div>
+
+          <div class="vs-text">VS</div>
+
+          <div class="co2-tree-equivalent">
+            <div class="tree-icon"><i class="fas fa-water"></i></div>
+            <div class="tree-count">10</div>
+            <div class="tree-label">Algae Installations</div>
           </div>
         </div>
 
@@ -971,6 +1352,29 @@
           </div>
         </div>
 
+        <!-- World Map Visualization -->
+        <div class="world-map-viz">
+          <h3>Global Urban Heat Challenges</h3>
+          <div class="map-container">
+            <div class="map-point" style="top: 30%; left: 25%">
+              <div class="map-label">North America</div>
+            </div>
+            <div class="map-point" style="top: 45%; left: 45%">
+              <div class="map-label">Europe</div>
+            </div>
+            <div class="map-point" style="top: 60%; left: 70%">
+              <div class="map-label">Asia</div>
+            </div>
+            <div class="map-point" style="top: 75%; left: 55%">
+              <div class="map-label">Australia</div>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 1.5rem">
+            Urban heat island effect is a global challenge affecting cities
+            across all continents
+          </p>
+        </div>
+
         <h2>Aligning with UN Sustainable Development Goals</h2>
         <p>
           Our solution addresses key global challenges identified by the United
@@ -1001,12 +1405,12 @@
       <div class="content-section">
         <h1>Our Innovative Solution</h1>
         <p>
-          AlgaeVerse AI combines biotechnology with artificial intelligence to
-          create sustainable urban cooling systems.
+          SkyLux AlgaeVerse combines biotechnology with artificial intelligence
+          to create sustainable urban farming and cooling systems.
         </p>
 
         <div class="visualization">
-          <h3>How Algae Façades Work</h3>
+          <h3>How Algae Systems Work</h3>
           <div class="process-flow">
             <div class="process-step">
               <div class="step-icon"><i class="fas fa-sun"></i></div>
@@ -1031,14 +1435,30 @@
           </div>
         </div>
 
-        <h2>Algae Building Façades</h2>
-        <p>Our system uses algae as "living green skins" on buildings that:</p>
+        <h2>Space-Efficient Algae Farming</h2>
+        <p>Our system uses algae as "living green skins" that:</p>
         <ul>
           <li>Capture CO₂ up to 10x more efficiently than trees</li>
           <li>Provide natural insulation and cooling</li>
-          <li>Produce oxygen and biomass</li>
-          <li>Create dynamic, living architecture</li>
+          <li>Produce oxygen and valuable biomass</li>
+          <li>Can be installed on rooftops, walls, and urban spaces</li>
         </ul>
+
+        <!-- Algae Growth Visualization -->
+        <div class="growth-visualization">
+          <h3>Algae Growth Efficiency</h3>
+          <p>Our optimized systems achieve maximum growth in minimal time:</p>
+          <div class="growth-bar-container">
+            <div class="growth-bar" id="growthBar"></div>
+          </div>
+          <div class="growth-labels">
+            <span>Day 1</span>
+            <span>Day 3</span>
+            <span>Day 5</span>
+            <span>Day 7</span>
+            <span>Harvest Ready</span>
+          </div>
+        </div>
 
         <h2>Why Algae?</h2>
         <p>Algae offers unique advantages for urban environmental solutions:</p>
@@ -1056,12 +1476,12 @@
           <div class="card">
             <div class="icon"><i class="fas fa-shapes"></i></div>
             <h3>Versatility</h3>
-            <p>Can be integrated into various building designs</p>
+            <p>Can be integrated into various urban designs</p>
           </div>
         </div>
 
         <div class="visualization">
-          <h3>Efficiency Comparison</h3>
+          <h3>Space Efficiency Comparison</h3>
           <div class="comparison-chart">
             <div
               class="chart-bar"
@@ -1070,7 +1490,7 @@
                 background: linear-gradient(to top, #4caf50, #8bc34a);
               "
             >
-              <div class="chart-bar-label">Trees</div>
+              <div class="chart-bar-label">Traditional Farms</div>
             </div>
             <div
               class="chart-bar"
@@ -1079,22 +1499,21 @@
                 background: linear-gradient(to top, #2196f3, #03a9f4);
               "
             >
-              <div class="chart-bar-label">Green Walls</div>
+              <div class="chart-bar-label">Green Roofs</div>
             </div>
             <div class="chart-bar" style="height: 200px">
-              <div class="chart-bar-label">Algae Façades</div>
+              <div class="chart-bar-label">Algae Systems</div>
             </div>
           </div>
           <p style="text-align: center">
-            CO₂ capture efficiency per square meter
+            Food production per square meter in urban environments
           </p>
         </div>
 
-        <h2>AI Optimization</h2>
+        <h2>Autonomous Efficiency</h2>
         <p>
-          Our AI platform maximizes the efficiency and effectiveness of algae
-          façades through continuous monitoring and adjustment of environmental
-          conditions.
+          Our autonomous systems maximize efficiency and productivity while
+          minimizing labor costs and human intervention.
         </p>
       </div>
     </div>
@@ -1102,10 +1521,10 @@
     <!-- Technology Page -->
     <div id="technology" class="page">
       <div class="content-section">
-        <h1>How AlgaeVerse AI Works</h1>
+        <h1>How SkyLux AlgaeVerse Works</h1>
         <p>
           Our platform integrates multiple technologies to create an
-          intelligent, responsive system.
+          intelligent, responsive farming system.
         </p>
 
         <div class="process-flow">
@@ -1131,79 +1550,66 @@
           </div>
         </div>
 
-        <h2>Monitoring & Diagnosis</h2>
+        <h2>Closed-Loop Circulation System</h2>
         <p>
-          Computer vision and sensor networks continuously analyze algae health
-          and system performance:
+          Our innovative algae farming technology creates a sustainable
+          ecosystem:
         </p>
         <ul>
           <li>
-            Webcam + sensors analyze algae health (color, density, pH, growth
-            rate)
+            Self-contained system that minimizes water and nutrient requirements
           </li>
-          <li>
-            Detection of issues like dying algae, clogged pipes, abnormal pH
-          </li>
-          <li>
-            AI classification of algae condition: Healthy / Stressed / Withering
-          </li>
+          <li>Continuous monitoring of algae health and growth conditions</li>
+          <li>Automated harvesting and processing of algae biomass</li>
         </ul>
 
-        <h2>Predictive Modeling</h2>
-        <p>
-          Machine learning algorithms forecast system performance and needs:
-        </p>
+        <h2>Autonomous Vehicle Integration</h2>
+        <p>Our autonomous vehicles handle harvesting and transportation:</p>
         <ul>
           <li>
-            Growth Prediction: Forecasts algae growth rate and oxygen production
+            Automated harvesting at optimal growth stages for maximum yield
           </li>
-          <li>
-            Harvest Readiness: Detects optimal harvest time through color
-            analysis
-          </li>
-          <li>
-            Maintenance Forecasting: Predicts future stress or failure points
-          </li>
+          <li>Efficient transportation of algae to processing facilities</li>
+          <li>Minimal human intervention required for operations</li>
         </ul>
 
         <div class="visualization">
-          <h3>AI Prediction Accuracy</h3>
+          <h3>System Efficiency Gains</h3>
           <div class="comparison-chart">
             <div class="chart-bar" style="height: 160px">
-              <div class="chart-bar-label">Growth Rate</div>
+              <div class="chart-bar-label">Water Usage</div>
             </div>
             <div class="chart-bar" style="height: 140px">
-              <div class="chart-bar-label">O₂ Production</div>
+              <div class="chart-bar-label">Energy Efficiency</div>
             </div>
             <div class="chart-bar" style="height: 180px">
-              <div class="chart-bar-label">Harvest Time</div>
+              <div class="chart-bar-label">Yield Increase</div>
             </div>
             <div class="chart-bar" style="height: 120px">
-              <div class="chart-bar-label">pH Changes</div>
+              <div class="chart-bar-label">Labor Reduction</div>
             </div>
           </div>
           <p style="text-align: center">
-            AI prediction accuracy across different metrics
+            Efficiency improvements compared to traditional farming
           </p>
         </div>
 
-        <h2>Decision Engine</h2>
+        <h2>AI Decision Engine</h2>
         <p>
           Our AI makes intelligent recommendations and automated adjustments:
         </p>
         <ul>
-          <li>Suggests dosing nutrients, adjusting water flow, or shading</li>
-          <li>Simulates 24-hour cooling impact and CO₂ capture</li>
-          <li>Dynamically adjusts environment parameters</li>
+          <li>Suggests optimal nutrient levels and environmental conditions</li>
+          <li>Predicts harvest times for maximum biomass yield</li>
+          <li>Dynamically adjusts system parameters for efficiency</li>
         </ul>
 
         <h2>Real-Time Dashboard</h2>
         <p>User-friendly interface for monitoring and control:</p>
         <ul>
-          <li>Live sliders for temperature, pH, light, CO₂, flow</li>
+          <li>Live monitoring of temperature, pH, light, CO₂, flow</li>
           <li>
-            Outputs: Growth prediction, harvest readiness, cooling effect, CO₂
-            captured
+            Outputs: Growth prediction, harvest readiness, system efficiency
           </li>
           <li>"What-if" analysis with visualization tools</li>
           <li>Exportable data for further analysis</li>
@@ -1211,36 +1617,157 @@
       </div>
     </div>
 
-    <!-- Impact Page -->
-    <div id="impact" class="page">
+    <!-- Business Model Page -->
+    <div id="business" class="page">
       <div class="content-section">
-        <h1>Social & Environmental Impact</h1>
+        <h1>Business Model</h1>
         <p>
-          AlgaeVerse AI creates multiple benefits for cities, residents, and the
-          planet.
+          SkyLux AlgaeVerse creates sustainable value through multiple revenue
+          streams and strategic partnerships.
         </p>
 
-        <h2>Environmental Benefits</h2>
-        <div class="card-container">
-          <div class="card">
-            <div class="icon"><i class="fas fa-temperature-low"></i></div>
-            <h3>Cooler Cities</h3>
-            <p>Reduce Urban Heat Island effect without adding AC load</p>
-          </div>
-          <div class="card">
-            <div class="icon"><i class="fas fa-wind"></i></div>
-            <h3>Cleaner Air</h3>
-            <p>Capture CO₂ and produce oxygen for improved urban air quality</p>
-          </div>
-          <div class="card">
-            <div class="icon"><i class="fas fa-bolt"></i></div>
-            <h3>Energy Savings</h3>
-            <p>Lower electricity demand and reduced carbon emissions</p>
+        <div class="canvas-section">
+          <h2>Value Proposition</h2>
+          <div class="canvas-grid">
+            <div class="canvas-card">
+              <h3>Air Purification & Urban Cooling</h3>
+              <p>
+                Improved air quality with more oxygen release and reduced
+                greenhouse gases
+              </p>
+            </div>
+            <div class="canvas-card">
+              <h3>Space-efficient Farming</h3>
+              <p>
+                Minimal area used for greening, farming and cooling in
+                high-density cities
+              </p>
+            </div>
+            <div class="canvas-card">
+              <h3>Autonomous Efficiency</h3>
+              <p>
+                Boosting productivity while minimizing labor costs and human
+                intervention
+              </p>
+            </div>
+            <div class="canvas-card">
+              <h3>Climate Change Alleviation</h3>
+              <p>
+                Reduced carbon emissions and support for green energy
+                initiatives
+              </p>
+            </div>
+            <div class="canvas-card">
+              <h3>Self-sustainability</h3>
+              <p>
+                Minimizes dependence on external resources besides water and
+                nutrients
+              </p>
+            </div>
           </div>
         </div>
 
+        <div class="canvas-section">
+          <h2>Customer Segments</h2>
+          <div class="card-container">
+            <div class="card">
+              <div class="icon"><i class="fas fa-building"></i></div>
+              <h3>Government & Municipal Bodies</h3>
+              <p>
+                Responsible for urban sustainability and public infrastructure
+              </p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-industry"></i></div>
+              <h3>Algae Biomass Companies</h3>
+              <p>
+                Using algae for biofuel, animal feed, biotech or nutraceuticals
+              </p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-flask"></i></div>
+              <h3>Research Institutions</h3>
+              <p>Requiring data collection for studies or algae experiments</p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-hard-hat"></i></div>
+              <h3>Construction Companies</h3>
+              <p>
+                Seeking impactful green building designs and energy solutions
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-section">
+          <h2>Revenue Streams</h2>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-number">1</div>
+              <div class="stat-label">Direct System Sales</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Installation Services</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Maintenance Contracts</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Autonomous Systems</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Algae Biomass Sales</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">6</div>
+              <div class="stat-label">Carbon Credit Sales</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-section">
+          <h2>Customer Relationships</h2>
+          <div class="card-container">
+            <div class="card">
+              <div class="icon"><i class="fas fa-handshake"></i></div>
+              <h3>Government Partnerships</h3>
+              <p>Transparent collaboration and turnkey solutions</p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-file-contract"></i></div>
+              <h3>Long-term Contracts</h3>
+              <p>Bulk algae supply agreements with biomass companies</p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-database"></i></div>
+              <h3>Data Sharing</h3>
+              <p>Research access to real-time system data</p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-headset"></i></div>
+              <h3>Consultancy Services</h3>
+              <p>Strategic support for green building projects</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-section">
+          <h2>Key Activities</h2>
+          <ul>
+            <li>Design and Development of algae cultivation systems</li>
+            <li>Autonomous Systems implementation for efficiency</li>
+            <li>Monitoring and Data Analytics for optimization</li>
+            <li>Marketing and Outreach to drive adoption</li>
+            <li>Research and Development for continuous improvement</li>
+          </ul>
+        </div>
+
         <div class="visualization">
-          <h3>Projected Annual Impact per 100 Buildings</h3>
+          <h3>Projected Annual Impact per 100 Installations</h3>
           <div class="comparison-chart">
             <div class="chart-bar" style="height: 180px">
               <div class="chart-bar-label">CO₂ Captured</div>
@@ -1249,80 +1776,21 @@
               <div class="chart-bar-label">Energy Saved</div>
             </div>
             <div class="chart-bar" style="height: 140px">
-              <div class="chart-bar-label">Cooling Effect</div>
-            </div>
-            <div class="chart-bar" style="height: 120px">
               <div class="chart-bar-label">Biomass Produced</div>
             </div>
+            <div class="chart-bar" style="height: 120px">
+              <div class="chart-bar-label">Water Recycled</div>
+            </div>
           </div>
         </div>
-
-        <h2>Economic & Social Benefits</h2>
-        <ul>
-          <li>
-            Circular economy: Harvested algae reused as biofuel, fertilizer, or
-            food
-          </li>
-          <li>
-            Scalable solution: From dense tropical cities to space habitats
-          </li>
-          <li>
-            Improved public health through better air quality and reduced heat
-            stress
-          </li>
-          <li>Job creation in green technology and maintenance sectors</li>
-        </ul>
-
-        <h2>Evaluation Metrics</h2>
-        <p>We measure success through concrete environmental indicators:</p>
-        <ul>
-          <li>
-            Prediction Accuracy: MAE/RMSE for algae growth & O₂ production
-          </li>
-          <li>
-            Cooling Effect: Measured ΔT near pilot façade vs. control wall
-          </li>
-          <li>Energy Avoided: Equivalent kWh of AC load prevented</li>
-          <li>CO₂ Captured: kg/day per building surface</li>
-        </ul>
-
-        <div class="stats-grid">
-          <div class="stat-box">
-            <div class="stat-number">3-5°C</div>
-            <div class="stat-label">Surface temperature reduction</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number">2-4°C</div>
-            <div class="stat-label">Ambient air cooling</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number">5kg/m²</div>
-            <div class="stat-label">Annual CO₂ capture</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number">30%</div>
-            <div class="stat-label">Energy savings for cooling</div>
-          </div>
-        </div>
-
-        <h2>Ethical Considerations</h2>
-        <p>We've designed our system with ethical principles in mind:</p>
-        <ul>
-          <li>Privacy: No human tracking in our monitoring systems</li>
-          <li>Bias Mitigation: Trained on diverse environmental conditions</li>
-          <li>Transparency: Clear reporting and explainable AI decisions</li>
-          <li>Human Oversight: Operators review and approve recommendations</li>
-        </ul>
       </div>
     </div>
+
     <footer>
       <p>
-        AlgaeVerse AI – Intelligent Algae Façade Optimization for Sustainable
-        Cities
+        SkyLux AlgaeVerse – Intelligent Algae Farming for Sustainable Cities
       </p>
-      <p>
-        Addressing Urban Heat Island Effect through AI-powered Biotechnology
-      </p>
+      <p>Addressing Urban Challenges through AI-powered Biotechnology</p>
     </footer>
 
     <script>
@@ -1519,6 +1987,13 @@
 
         // Scroll to top
         window.scrollTo(0, 0);
+
+        // Animate growth bar when solution page is shown
+        if (pageId === "solution") {
+          setTimeout(() => {
+            document.getElementById("growthBar").style.width = "100%";
+          }, 500);
+        }
       }
 
       // Initialize slider functionality
@@ -1584,6 +2059,11 @@
 
         // Initialize sliders
         initSliders();
+
+        // Animate growth bar
+        setTimeout(() => {
+          document.getElementById("growthBar").style.width = "100%";
+        }, 1000);
       });
     </script>
   </body>
